@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Italiana&display=swap');
+
+h1 {
+    @include title-home;
+    font-size: 800%;
+
+    & .logo__title-one {
+      animation: move-from-left 1s ease-out;
+      @include vulpesvulpes;
+    }
+    
+    & .logo__title-two {
+      animation: move-from-right 1s ease-out;
+      @include vulpesvulpes;
+    }
+  }
+
+  h2 {
+    @include title-home;
+    font-size: 100%;
+    transform: translate(-3rem, -3.5rem);
+    font-family: 'Italiana', monospace;
+    float: right;
+    
+    & .logo__name {
+      transform: translateX(-60%);
+      animation: fox-appear 1s ease-out;
+      @include vulpesvulpes;
+    }
+  }
+  
+  @media screen and (max-width: 1500px) {
+    h1 {
+      font-size: 1500%;
+    }
+
+    h2 .logo__name {
+      font-size: 290%;
+      line-height: 5.5rem;
+      padding-right: 16rem;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    h1 {
+      font-size: 1500%;
+    }
+
+    h2 .logo__name {
+      font-size: 200%;
+      line-height: 5.5rem;
+      padding-right: .5rem;
+    }
+  }
+
+  @media screen and (min-width: 3000px) {
+    h1 {
+      font-size: 1800%;
+    }
+
+    h2 .logo__name {
+      font-size: 350%;
+      line-height: 5.5rem;
+      padding-right: 2.3rem;
+    }
+  }

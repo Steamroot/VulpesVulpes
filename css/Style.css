@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Italiana&display=swap");
+@keyframes move-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+@keyframes move-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+@keyframes fox-appear {
+  0% {
+    opacity: 0;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+h1 {
+  font-family: 'Amatic SC', sans-serif;
+  text-align: center;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #afb1b6;
+  text-transform: uppercase;
+  font-size: 800%; }
+  h1 .logo__title-one {
+    animation: move-from-left 1s ease-out;
+    position: relative;
+    display: inline-block; }
+  h1 .logo__title-two {
+    animation: move-from-right 1s ease-out;
+    position: relative;
+    display: inline-block; }
+
+h2 {
+  font-family: 'Amatic SC', sans-serif;
+  text-align: center;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #afb1b6;
+  text-transform: uppercase;
+  font-size: 100%;
+  transform: translate(-3rem, -3.5rem);
+  font-family: 'Italiana', monospace;
+  float: right; }
+  h2 .logo__name {
+    transform: translateX(-60%);
+    animation: fox-appear 1s ease-out;
+    position: relative;
+    display: inline-block; }
+
+@media screen and (max-width: 1500px) {
+  h1 {
+    font-size: 1500%; }
+  h2 .logo__name {
+    font-size: 290%;
+    line-height: 5.5rem;
+    padding-right: 16rem; } }
+
+@media screen and (min-width: 2000px) {
+  h1 {
+    font-size: 1500%; }
+  h2 .logo__name {
+    font-size: 200%;
+    line-height: 5.5rem;
+    padding-right: .5rem; } }
+
+@media screen and (min-width: 3000px) {
+  h1 {
+    font-size: 1800%; }
+  h2 .logo__name {
+    font-size: 350%;
+    line-height: 5.5rem;
+    padding-right: 2.3rem; } }
+
+.about {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  grid-template-rows: [about1] 50% [about2] 50%; }
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%; }
+  .logo__fox {
+    height: 38rem;
+    width: 36rem;
+    clip-path: polygon(25% 0, 50% 33%, 75% 0, 100% 50%, 50% 100%, 0 50%);
+    background-color: #eb8f42;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    animation: fox-appear 1.4s; }
+
+@media screen and (max-width: 1500px) {
+  .logo__fox {
+    height: 72rem;
+    width: 73rem; } }
+
+@media screen and (min-width: 2000px) {
+  .logo__fox {
+    height: 64rem;
+    width: 63rem; } }
+
+@media screen and (min-width: 3000px) {
+  .logo__fox {
+    height: 84rem;
+    width: 83rem; } }
+
+#MenuButton {
+  font-size: 7rem;
+  cursor: pointer;
+  padding-left: 1rem;
+  transition: 0.3s;
+  z-index: 5;
+  color: #afb1b6;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5.2rem; }
+  #MenuButton:hover {
+    color: #eb8f42; }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background-color: #021526;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 6rem; }
+  .sidenav a {
+    padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+    text-decoration: none;
+    font-size: 5rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    text-align: center; }
+    .sidenav a:hover {
+      color: #eb8f42; }
+  .sidenav .sidenav__closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 3.6rem; }
+
+@media screen and (max-width: 1500px) {
+  .sidenav a {
+    font-size: 12rem; }
+  .sidenav .sidenav__closebtn {
+    font-size: 20rem; }
+  .sidenav a:nth-child(2) {
+    margin-top: 25rem; }
+  #MenuButton {
+    font-size: 15rem;
+    margin-left: 3rem; } }
+
+@media screen and (min-width: 2000px) {
+  .sidenav a {
+    font-size: 6rem; }
+  .sidenav .sidenav__closebtn {
+    font-size: 8rem; }
+  .sidenav a:nth-child(2) {
+    margin-top: 15rem; }
+  #MenuButton {
+    font-size: 12rem;
+    margin-left: 3rem; } }
+
+@media screen and (min-width: 3000px) {
+  .sidenav a {
+    font-size: 8rem; }
+  .sidenav .sidenav__closebtn {
+    font-size: 15rem; }
+  .sidenav a:nth-child(2) {
+    margin-top: 20rem; }
+  #MenuButton {
+    font-size: 20rem;
+    margin-left: 5rem; } }

@@ -1,0 +1,40 @@
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+  
+    &__fox{
+      height: 38rem;
+      width: 36rem;
+      clip-path: polygon(25% 0, 50% 33%, 75% 0, 100% 50%, 50% 100%, 0 50%);
+      background-color: $color-orange;
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      animation: fox-appear 1.4s;
+      }
+  }
+  
+  @media screen and (max-width: 1500px) {
+    .logo__fox {
+      height: 72rem;
+      width: 73rem;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .logo__fox {
+      height: 64rem;
+      width: 63rem;
+    }
+  }
+
+  @media screen and (min-width: 3000px) {
+    .logo__fox {
+      height: 84rem;
+      width: 83rem;
+    }
+  }

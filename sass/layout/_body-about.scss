@@ -1,0 +1,5 @@
+.about {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: [about1] 50% [about2] 50%;
+}
