@@ -1,2 +1,0 @@
-# VulpesVulpes
-Art Portfolio Website
