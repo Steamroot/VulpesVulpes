@@ -14,14 +14,15 @@
       position: relative;
       display: block;
       margin: 0 auto;
-      animation: fox-appear 1.4s;
+      animation: fox-appear 2s;
       }
   }
   
+// ---------------------------------------------------Media Queries-----------------------------------------------------------------
   @media screen and (max-width: 1500px) {
     .logo__fox {
-      height: 72rem;
-      width: 73rem;
+      height: 92rem;
+      width: 93rem;
     }
   }
 

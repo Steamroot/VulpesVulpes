@@ -1,27 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Italiana&display=swap");
-@keyframes move-from-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-30rem); }
-  100% {
-    opacity: 100%;
-    transform: translateX(0); } }
-
-@keyframes move-from-right {
-  0% {
-    opacity: 0;
-    transform: translateX(30rem); }
-  100% {
-    opacity: 100%;
-    transform: translateX(0); } }
-
 @keyframes fox-appear {
   0% {
-    opacity: 0;
-    transform: scale(1.2); }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    transform: scale(1); } }
+    opacity: 1; } }
 
 *,
 *::after,
@@ -42,65 +24,51 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
-h1 {
+.logo__title {
   font-family: 'Amatic SC', sans-serif;
   text-align: center;
   position: relative;
   text-align: center;
-  display: block;
   margin: 0 auto;
   color: #afb1b6;
   text-transform: uppercase;
-  font-size: 800%; }
-  h1 .logo__title-one {
-    animation: move-from-left 1s ease-out;
-    position: relative;
-    display: inline-block; }
-  h1 .logo__title-two {
-    animation: move-from-right 1s ease-out;
-    position: relative;
-    display: inline-block; }
+  animation: fox-appear 2s ease-out;
+  font-size: 1000%;
+  margin-top: -4rem;
+  margin-bottom: -6rem; }
 
-h2 {
+.logo__name {
+  animation: fox-appear 2s ease-out;
   font-family: 'Amatic SC', sans-serif;
   text-align: center;
   position: relative;
   text-align: center;
-  display: block;
   margin: 0 auto;
   color: #afb1b6;
   text-transform: uppercase;
-  font-size: 100%;
-  transform: translate(-3rem, -3.5rem);
-  font-family: 'Italiana', monospace;
-  float: right; }
-  h2 .logo__name {
-    transform: translateX(-60%);
-    animation: fox-appear 1s ease-out;
-    position: relative;
-    display: inline-block; }
+  font-size: 200%;
+  font-family: 'Italiana', monospace; }
 
 @media screen and (max-width: 1500px) {
-  h1 {
-    font-size: 1500%; }
-  h2 .logo__name {
-    font-size: 290%;
-    line-height: 5.5rem;
-    padding-right: 16rem; } }
+  .logo__title {
+    font-size: 2200%; }
+  .logo__name {
+    font-size: 400%;
+    margin-top: -15rem; } }
 
 @media screen and (min-width: 2000px) {
-  h1 {
+  .logo__title {
     font-size: 1500%; }
-  h2 .logo__name {
+  .logo__name {
     font-size: 200%;
     line-height: 5.5rem;
     padding-right: .5rem; } }
 
 @media screen and (min-width: 3000px) {
-  h1 {
+  .logo__title {
     font-size: 1800%; }
-  h2 .logo__name {
-    font-size: 350%;
+  .logo__name {
+    font-size: 500%;
     line-height: 5.5rem;
     padding-right: 2.3rem; } }
 
@@ -124,12 +92,12 @@ h2 {
     position: relative;
     display: block;
     margin: 0 auto;
-    animation: fox-appear 1.4s; }
+    animation: fox-appear 2s; }
 
 @media screen and (max-width: 1500px) {
   .logo__fox {
-    height: 72rem;
-    width: 73rem; } }
+    height: 92rem;
+    width: 93rem; } }
 
 @media screen and (min-width: 2000px) {
   .logo__fox {
@@ -166,49 +134,52 @@ h2 {
   transition: 0.5s;
   padding-top: 6rem; }
   .sidenav a {
-    padding: 0.8rem 0.8rem 0.8rem 3.2rem;
     text-decoration: none;
     font-size: 5rem;
     color: #fff;
     display: block;
     transition: 0.3s;
     text-align: center; }
+    .sidenav a:nth-child(2) {
+      padding-top: 4rem; }
     .sidenav a:hover {
       color: #eb8f42; }
   .sidenav .sidenav__closebtn {
     position: absolute;
     top: 0;
-    font-size: 3.6rem; }
+    font-size: 6rem;
+    padding-left: 4rem;
+    padding-top: .5rem; }
 
 @media screen and (max-width: 1500px) {
   .sidenav a {
-    font-size: 12rem; }
+    font-size: 16rem; }
   .sidenav .sidenav__closebtn {
     font-size: 20rem; }
   .sidenav a:nth-child(2) {
-    margin-top: 25rem; }
+    padding-top: 22rem; }
   #MenuButton {
     font-size: 15rem;
     margin-left: 3rem; } }
 
 @media screen and (min-width: 2000px) {
   .sidenav a {
-    font-size: 6rem; }
-  .sidenav .sidenav__closebtn {
     font-size: 8rem; }
+  .sidenav .sidenav__closebtn {
+    font-size: 10rem; }
   .sidenav a:nth-child(2) {
-    margin-top: 15rem; }
+    padding-top: 10rem; }
   #MenuButton {
     font-size: 12rem;
     margin-left: 3rem; } }
 
 @media screen and (min-width: 3000px) {
   .sidenav a {
-    font-size: 8rem; }
+    font-size: 12rem; }
   .sidenav .sidenav__closebtn {
     font-size: 15rem; }
   .sidenav a:nth-child(2) {
-    margin-top: 20rem; }
+    padding-top: 16rem; }
   #MenuButton {
     font-size: 20rem;
     margin-left: 5rem; } }
